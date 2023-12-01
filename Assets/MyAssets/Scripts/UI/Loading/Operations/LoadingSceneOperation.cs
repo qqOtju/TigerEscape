@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Threading.Tasks;
+using MyAssets.Scripts.Infrastructure.GameStartup;
 using UnityEngine.SceneManagement;
 
-namespace MyAssets.Scripts.Infrastructure.GameStartup.Operations
+namespace MyAssets.Scripts.UI.Loading.Operations
 {
     public class LoadingSceneOperation : ILoadingOperation
     {

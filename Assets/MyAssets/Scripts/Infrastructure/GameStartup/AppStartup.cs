@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using MyAssets.Scripts.Infrastructure.GameStartup.Operations;
 using MyAssets.Scripts.UI.Loading;
+using MyAssets.Scripts.UI.Loading.Operations;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 

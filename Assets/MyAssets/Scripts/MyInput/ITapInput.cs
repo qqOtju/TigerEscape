@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace MyAssets.Scripts.Input
+namespace MyAssets.Scripts.MyInput
 {
     public interface ITapInput
     {

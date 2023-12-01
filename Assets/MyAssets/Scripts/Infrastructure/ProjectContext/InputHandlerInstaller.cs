@@ -1,4 +1,4 @@
-using MyAssets.Scripts.Input;
+using MyAssets.Scripts.MyInput;
 using UnityEngine;
 using Zenject;
 

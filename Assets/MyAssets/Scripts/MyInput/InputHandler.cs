@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace MyAssets.Scripts.Input
+namespace MyAssets.Scripts.MyInput
 {
     public class InputHandler : MonoBehaviour, ITapInput, IPositionInput
     {
@@ -12,6 +12,7 @@ namespace MyAssets.Scripts.Input
 
         public event Action<Vector2> OnTap;
         public event Action<Vector2> OnPositionChange;
+        private int _count;
         
         private void Awake()
         {
@@ -20,6 +21,7 @@ namespace MyAssets.Scripts.Input
             _controls.Player.Tap.performed += OnTapPerformed;
             _controls.Player.Position.started += OnChangeStart;
             _controls.Player.Position.canceled += OnPositionChangeCancel;
+            _count = PlayerPrefs.GetInt("ScreenshotsCount");
         }
 
         private void OnDestroy()
@@ -39,6 +41,14 @@ namespace MyAssets.Scripts.Input
             if (position == _currentPosition) return;
             _currentPosition = position;
             OnPositionChange?.Invoke(position);
+            KeyCode code = KeyCode.A;
+            if (Input.GetKeyDown(code))
+            {
+                _count++;
+                ScreenCapture.CaptureScreenshot($"screenshot{_count}.png");
+                PlayerPrefs.SetInt("ScreenshotsCount", _count);
+                Debug.Log("A screenshot was taken!");
+            }
         }
 
         private void OnChangeStart(InputAction.CallbackContext obj) =>

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using MyAssets.Scripts.DesignPatterns.ObjPool;
 using MyAssets.Scripts.GameLogic.Game;
-using MyAssets.Scripts.Input;
+using MyAssets.Scripts.MyInput;
 using UnityEngine;
 using Zenject;
 

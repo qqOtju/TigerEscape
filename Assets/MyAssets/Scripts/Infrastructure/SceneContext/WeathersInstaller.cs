@@ -2,7 +2,7 @@
 using MyAssets.Scripts.GameLogic.Game;
 using MyAssets.Scripts.GameLogic.Weathers.Rain;
 using MyAssets.Scripts.GameLogic.Weathers.Sun;
-using MyAssets.Scripts.Input;
+using MyAssets.Scripts.MyInput;
 using UnityEngine;
 using Zenject;
 

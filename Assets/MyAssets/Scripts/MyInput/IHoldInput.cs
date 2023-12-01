@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MyAssets.Scripts.Input
+namespace MyAssets.Scripts.MyInput
 {
     public interface IHoldInput
     {
