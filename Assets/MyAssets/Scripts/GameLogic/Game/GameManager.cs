@@ -18,7 +18,6 @@ namespace MyAssets.Scripts.GameLogic.Game
         [Header("Background")]
         [SerializeField] private Sprite _sunBg;
         [SerializeField] private Sprite _rainBg;
-        [SerializeField] private SpriteRenderer _background;
         [Header("Buttons")]
         [SerializeField] private Button _scaleAbilityButton;
         [SerializeField] private Button _shieldAbilityButton;
@@ -104,7 +103,6 @@ namespace MyAssets.Scripts.GameLogic.Game
             if (_currentWeather == WeatherType.Rain)
             {
                 _soundManager.PlayWeatherSound(WeatherType.Rain);
-                _background.sprite = _rainBg;
                 _coroutine = StartCoroutine(_rainSpawner.StartRain());
                 _rainCoroutine = StartCoroutine(PointsDuringRain());
                 _playerController.Weather = WeatherType.Rain;
@@ -112,7 +110,6 @@ namespace MyAssets.Scripts.GameLogic.Game
             else
             {
                 _soundManager.PlayWeatherSound(WeatherType.Sun);
-                _background.sprite = _sunBg;
                 _coroutine = StartCoroutine(_sunSpawner.StartSun());
                 _sunSpawner.OnSunbeamTap += GetPoint;
                 _playerController.Weather = WeatherType.Sun;
